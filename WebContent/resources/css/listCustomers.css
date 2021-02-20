@@ -1,0 +1,20 @@
+html, body {
+/* 	font-family: sans-serif; */
+}
+
+h2 {
+	background-color: #0d6efd !important;
+	color: #ffff !important;
+	text-align: center;
+}
+
+thead {
+	background-color: #0d6efd !important;
+	border-bottom: hidden;
+	color: #ffff !important;
+	text-align: center;
+}
+
+td {
+	text-align: center;
+}

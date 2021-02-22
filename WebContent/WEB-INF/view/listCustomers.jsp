@@ -25,14 +25,28 @@
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Email</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="customer" items="${customers}">
 						<tr>
+							<c:url var="update" value="/customer/showFormForUpdate">
+								<c:param name="customerId" value="${customer.id}"/>
+							</c:url>
+							<c:url var="delete" value="/customer/showFormForDelete">
+								<c:param name="customerId" value="${customer.id}"/>
+							</c:url>	
 							<td>${customer.firstName}</td>
 							<td>${customer.lastName}</td>
 							<td>${customer.email}</td>
+							<td>
+								<a href="${update}">Update</a>
+								&nbsp;|
+								<a href="${delete}"
+									onclick="if (!(confirm('Are you sure you want yo delete this customer?')))
+									return false">Delete</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>

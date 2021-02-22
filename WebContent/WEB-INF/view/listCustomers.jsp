@@ -19,24 +19,28 @@
 				<h2>CRM - Customer Relationship Manager</h2>
 			</div>
 		</div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="customer" items="${customers}">
-					<tr class="table-primary">
-						<td>${customer.firstName}</td>
-						<td>${customer.lastName}</td>
-						<td>${customer.email}</td>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach var="customer" items="${customers}">
+						<tr>
+							<td>${customer.firstName}</td>
+							<td>${customer.lastName}</td>
+							<td>${customer.email}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		<div class="d-grip gap-2 d-md-flex justify-content-md-end">
+			<input class="btn btn-primary" type="submit" value="Add Customer"
+				onclick="window.location.href='showFormForAdd'; return false;">	
+		</div>
 	</div>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>

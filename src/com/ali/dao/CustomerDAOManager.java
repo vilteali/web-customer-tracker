@@ -20,14 +20,20 @@ public class CustomerDAOManager implements CustomerDAO {
 	@Override
 	public List<Customer> getCustomers() {
 		
-		// get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		// create a query, execute query and get result list
 		Query<Customer> theQuery = currentSession.createQuery("from Customer", Customer.class);
 		List<Customer> customers = theQuery.getResultList();
 		
 		return customers;
+	}
+
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		currentSession.save(theCustomer);
+		
 	}
 
 }

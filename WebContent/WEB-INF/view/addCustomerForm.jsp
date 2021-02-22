@@ -26,26 +26,29 @@
 				<div class="row mb-3">
 					<label for="firstName" class="col-sm-2 col-form-label">First
 						Name</label>
-					<div class="col-sm-5">
-						<input type="text" class="form-control" id="firstName"
-							placeholder="First Name" <form:input path="firstName"/>/>
-					</div>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="firstName"
+						placeholder="First Name" name="firstName"
+						value="<c:out value="${modelo.firstName}"/>" />
 				</div>
+			</div>
 				<div class="row mb-3">
 					<label for="lastName" class="col-sm-2 col-form-label">Last
 						Name</label>
-					<div class="col-sm-5">
-						<input type="text" class="form-control" id="lastName"
-							placeholder="Last Name" <form:input path="lastName"/>/>
-					</div>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="lastName"
+						placeholder="Last Name" name="lastName"
+						value="<c:out value="${modelo.lastName}"/>" />
 				</div>
+			</div>
 				<div class="row mb-3">
 					<label for="email" class="col-sm-2 col-form-label">Email</label>
-					<div class="col-sm-5">
-						<input type="email" class="form-control" id="email"
-							placeholder="Email" <form:input path="email"/>/>
-					</div>
+				<div class="col-sm-5">
+					<input type="email" class="form-control" id="email"
+						placeholder="Email" name="email"
+						value="<c:out value="${modelo.email}"/>" />
 				</div>
+			</div>
 			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 				<button class="btn btn-primary" type="submit">Save</button>
 			</div>

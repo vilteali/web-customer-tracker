@@ -25,7 +25,6 @@ public class CustomerController {
 	public String listCustomers(Model model) {
 		
 		List<Customer> theCustomers = customerService.getCustomers();
-		
 		model.addAttribute("customers", theCustomers);
 		
 		return "listCustomers";
@@ -35,7 +34,6 @@ public class CustomerController {
 	public String showFormForAdd(Model model) {
 		
 		Customer theCustomer = new Customer();
-		
 		model.addAttribute("customer", theCustomer);
 		
 		return "addCustomerForm";
@@ -45,7 +43,6 @@ public class CustomerController {
 	public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 		
 		customerService.saveCustomer(theCustomer);
-		
 		return "redirect:/customer/list";
 		
 	}
@@ -54,7 +51,6 @@ public class CustomerController {
 	public String showFormForUpdate(Model model, @RequestParam("customerId") Integer id) {
 		
 		Customer theCustomer = customerService.getCustomer(id);
-		
 		model.addAttribute("customer", theCustomer);
 		
 		return "addCustomerForm";
@@ -64,8 +60,18 @@ public class CustomerController {
 	public String showFormForDelete(@RequestParam("customerId") Integer id) {
 		
 		customerService.deleteCustomer(id);
-		
 		return "redirect:/customer/list";
+		
+	}
+	
+	@GetMapping("/searchCustomer")
+	public String searchCustomers(Model model, @RequestParam("searchCustomer") 
+									String searchCustomer) {
+		
+		List<Customer> theCustomer = customerService.searchCustomer(searchCustomer);
+		model.addAttribute("customers", theCustomer);
+		
+		return "listCustomers";
 		
 	}
 	

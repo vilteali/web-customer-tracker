@@ -30,3 +30,26 @@ td {
 	.table-striped>tbody>tr:nth-child(even)>th {
  	background-color: #f8f9fa;
 }
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-block-end: auto;
+}
+
+.input-group {
+    margin-bottom: -10px;
+    margin-top: 15px;
+} 
+
+
+
+
+
+
+
+
+
+
+

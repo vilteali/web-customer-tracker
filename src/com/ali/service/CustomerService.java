@@ -13,5 +13,7 @@ public interface CustomerService {
 	void saveCustomer(Customer theCustomer);
 
 	void deleteCustomer(Integer id);
+
+	List<Customer> searchCustomer(String searchCustomer);
 	
 }

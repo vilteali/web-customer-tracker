@@ -43,4 +43,11 @@ public class CustomerServiceManager implements CustomerService {
 		customerDAO.deleteCustomer(id);
 	}
 
+	@Override
+	@Transactional
+	public List<Customer> searchCustomer(String searchCustomer) {
+		
+		return customerDAO.searchCustomers(searchCustomer);
+	}
+
 }

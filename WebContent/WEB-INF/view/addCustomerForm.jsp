@@ -29,7 +29,7 @@
 				<div class="col-sm-5">
 					<input type="text" class="form-control" id="firstName"
 						placeholder="First Name" name="firstName"
-						value="<c:out value="${modelo.firstName}"/>" />
+						value="<c:out value="${customer.firstName}"/>" />
 				</div>
 			</div>
 				<div class="row mb-3">
@@ -38,7 +38,7 @@
 				<div class="col-sm-5">
 					<input type="text" class="form-control" id="lastName"
 						placeholder="Last Name" name="lastName"
-						value="<c:out value="${modelo.lastName}"/>" />
+						value="<c:out value="${customer.lastName}"/>" />
 				</div>
 			</div>
 				<div class="row mb-3">
@@ -46,7 +46,7 @@
 				<div class="col-sm-5">
 					<input type="email" class="form-control" id="email"
 						placeholder="Email" name="email"
-						value="<c:out value="${modelo.email}"/>" />
+						value="<c:out value="${customer.email}"/>" />
 				</div>
 			</div>
 			<div class="d-grid gap-2 d-md-flex justify-content-md-end">

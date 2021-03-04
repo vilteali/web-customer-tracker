@@ -1,4 +1,4 @@
-package com.ali.model;
+package com.ali.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

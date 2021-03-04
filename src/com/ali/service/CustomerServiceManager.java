@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ali.dao.CustomerDAO;
-import com.ali.model.Customer;
+import com.ali.entity.Customer;
 
 @Service
 public class CustomerServiceManager implements CustomerService {

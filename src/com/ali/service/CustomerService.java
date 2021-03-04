@@ -2,7 +2,7 @@ package com.ali.service;
 
 import java.util.List;
 
-import com.ali.model.Customer;
+import com.ali.entity.Customer;
 
 public interface CustomerService {
 	
